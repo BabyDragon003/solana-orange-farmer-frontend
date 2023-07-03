@@ -1,0 +1,111 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff9e7 !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.MuiList-root {
+  
+  background-color: #fcedbf !important;
+}
+.MuiDialogTitle-root {
+  background-color: #cabd97 !important;
+  color: 'white' !important;
+}
+.MuiButton-containedPrimary {
+  background-color: #cabd97 !important;
+}
+
+.MuiPaper-root {
+  background-color: transparent !important;
+}
+
+.MuiBox-root {
+  overflow: hidden !important;
+}
+
+.fact {
+  background-color: rgba(255, 255, 255) !important;
+  border-radius: 5px !important;
+}
+
+.custom-button {
+  background-color: #ec8c1d !important;
+  font-size: 20px !important;
+  color:white !important;
+  border-radius: 20px !important;
+}
+
+.MuiPaper-rounded {
+  border-radius: 20px !important;
+}
+
+.css-v8qbgq {
+  background-color: #fff9e7 !important;
+/*  background-image: url("./assets/background.png");*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2% !important;
+  border: 3px solid rgba(45, 98, 89, 0.297);
+  border-radius: 10px;
+  max-width: 700px !important;
+}
+
+/* card */
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root {
+  margin: 15% !important;
+  margin-bottom: 20px !important; 
+  margin-top: 20px !important; 
+}
+
+.logo {
+  height: 230px;
+  width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root {
+    margin: 1% !important;
+    margin-bottom: 20px !important; 
+    margin-top: 20px !important; 
+  }
+
+  .logo {
+    height: 130px;
+    width: 170px;
+    margin-top: 10px !important;
+  }
+}
+
+.solana-heart-image {
+  position: absolute;
+  right: 9%;
+  top: 430px;
+}
+
+.crayon-heart-image {
+  position: absolute;
+  left: 7%;
+  top: 350px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .solana-heart-image {
+    display: none;
+  }
+  .crayon-heart-image {
+    display: none;
+  }
+}
