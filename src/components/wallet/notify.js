@@ -1,3 +1,4 @@
+import { Link, makeStyles } from '@material-ui/core';
 import LaunchIcon from '@material-ui/icons/Launch';
 import { useSnackbar } from 'notistack';
 import React, { useCallback } from 'react';
@@ -12,22 +13,6 @@ const useStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
         marginLeft: 16,
-        textDecoration: 'underline',
-        '&:hover': {
-            color: '#000000',
-        },
-    },
-    icon: {
-        fontSize: 20,
-        marginLeft: 8,
-    },
-});
-
-export function useNotify() {
-    const styles = useStyles();
-    const { enqueueSnackbar } = useSnackbar();
-
-    return useCallback(
         (variant, message, signature) => {
             enqueueSnackbar(
                 <span className={styles.notification}>

@@ -1,3 +1,4 @@
+import * as anchor from "@project-serum/anchor";
 import {BN} from "@project-serum/anchor";
 import {
   PublicKey,
@@ -12,22 +13,6 @@ import {
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 
-import { BigNumber } from "bignumber.js";
-
-import { WalletContextState } from "@solana/wallet-adapter-react";
-
-import * as Constants from "./constants";
-import { IDL } from "./idl";
-import { showToast } from "./utils";
-import { toast } from 'react-toastify';
-import * as keys from "./keys";
-import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
-
-// const connection = new Connection("https://api.metaplex.solana.com");
-const connection = new Connection(clusterApiUrl("devnet"));
-
-export const getProgram = (wallet: any) => {
-  let provider = new anchor.Provider(
     connection,
     wallet,
     anchor.Provider.defaultOptions()

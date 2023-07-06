@@ -1,3 +1,4 @@
+import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -12,22 +13,6 @@ const CardWrapper = styled(Card)({
 });
 
 const nutritionFacts = [
-  {
-    label: "Daily Return",
-    value: 8,
-  },
-  {
-    label: "APR",
-    value: "2,920",
-  },
-  {
-    label: "Dev Fee",
-    value: 5,
-  },
-];
-
-export default function NutritionFacts() {
-  return (
     <CardWrapper>
       <CardContent className="fact">
         <Typography variant="h5" sx={{ color: "black" }} >

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
 body {
   margin: 0;
@@ -12,22 +13,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.MuiList-root {
-  
-  background-color: #fcedbf !important;
-}
-.MuiDialogTitle-root {
-  background-color: #cabd97 !important;
-  color: 'white' !important;
-}
-.MuiButton-containedPrimary {
-  background-color: #cabd97 !important;
-}
-
-.MuiPaper-root {
-  background-color: transparent !important;
 }
 
 .MuiBox-root {
