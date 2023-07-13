@@ -3,26 +3,16 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+
+import { styled } from "@mui/system";
+
+const CardWrapper = styled(Card)({
+  background: "rgb(255 252 248)",
+  marginBottom: 24,
   border: "1px solid #555",
 });
 
 const nutritionFacts = [
-  {
-    label: "Daily Return",
-    value: 8,
-  },
-  {
-    label: "APR",
-    value: "2,920",
-  },
-  {
-    label: "Dev Fee",
-    value: 5,
-  },
-];
-
-export default function NutritionFacts() {
-  return (
     <CardWrapper>
       <CardContent className="fact">
         <Typography variant="h5" sx={{ color: "black" }} >
