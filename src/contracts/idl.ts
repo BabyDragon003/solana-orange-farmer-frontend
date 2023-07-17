@@ -1,4 +1,3 @@
-export type BakedBeans = {
   "version": "0.1.0",
   "name": "baked_beans",
   "instructions": [
