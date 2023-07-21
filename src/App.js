@@ -18,10 +18,3 @@ function App() {
           <Wallets>
             <Home />
           </Wallets>
-        </SnackbarProvider>
-      </Box>
-    </BrowserRouter>
-  );
-}
-
-export default App;
