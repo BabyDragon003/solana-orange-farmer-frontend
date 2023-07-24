@@ -1,4 +1,3 @@
-import { PublicKey } from "@solana/web3.js";
 
 
 export const GLOBAL_STATE_SEED = "GLOBAL_STATE_SEED";
