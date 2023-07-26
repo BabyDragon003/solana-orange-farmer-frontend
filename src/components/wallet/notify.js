@@ -3,6 +3,12 @@ import LaunchIcon from '@material-ui/icons/Launch';
 import { useSnackbar } from 'notistack';
 import React, { useCallback } from 'react';
 
+const useStyles = makeStyles({
+    notification: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    link: {
         color: '#ffffff',
         display: 'flex',
         alignItems: 'center',
