@@ -1,3 +1,4 @@
+import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import logo from "../../assets/FullLogo.png";
 import "../../index.css";
