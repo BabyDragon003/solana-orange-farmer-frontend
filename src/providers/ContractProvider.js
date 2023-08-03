@@ -3,6 +3,12 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { config } from "../config";
 import {
   getWalletSolBalance,
+  getVaultSolBalance,
+  getUserData
+} from "../contracts/bean"
+
+export const ContractContext = createContext({
+  minersCount: 0,
   beanRewards: 0,
   walletSolBalance: 0,
   contractSolBalance: 0,
