@@ -13,15 +13,25 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Montserrat",
-    body1: {
-      fontSize: 20,
+      fontWeight: 500,
     },
-    body2: {
-      fontSize: 16,
+  },
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          // boxShadow: "6px 6px 20px 6px #00000096",
+          borderRadius: 5,
+
+        },
+      },
     },
-    allVariants: {
-      color: "#17215E",
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: "12px 24px",
+        },
+      },
     },
     MuiButton: {
       styleOverrides: {

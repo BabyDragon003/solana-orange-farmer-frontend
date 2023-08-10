@@ -13,16 +13,26 @@ import {
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 
-import { BigNumber } from "bignumber.js";
+    connection,
+    wallet,
+    anchor.Provider.defaultOptions()
+  );
+  const program = new anchor.Program(IDL, Constants.PROGRAM_ID, provider);
+  return program;
+};
+export const getGlobalStateData = async (wallet: any) => {
+  const program = getProgram(wallet);
+  const globalStateKey = await keys.getGlobalStateKey();
+  console.log("globalStateKey =", globalStateKey.toString());
+  const stateData = await program.account.globalState.fetchNullable(
+    globalStateKey
+  );
+  if (stateData === null) return null;
+  return stateData;
+};
 
-import { WalletContextState } from "@solana/wallet-adapter-react";
-
-import * as Constants from "./constants";
-import { IDL } from "./idl";
-import { showToast } from "./utils";
-import { toast } from 'react-toastify';
-import * as keys from "./keys";
-import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
+export const getWalletSolBalance = async (wallet: any): Promise<String> => {
+  if (wallet.publicKey === null || wallet.publicKey === undefined) return "0";
   let x = await connection.getBalance(wallet.publicKey);
   console.log('getWalletSolBalance x=', x);
   return new BigNumber(await connection.getBalance(wallet.publicKey)).div(
