@@ -1,4 +1,3 @@
-{
   "files": {
     "main.css": "/static/css/main.322f9359.chunk.css",
     "main.js": "/static/js/main.4e02b20c.chunk.js",
@@ -18,3 +17,10 @@
     "static/media/index.css": "/static/media/background.c8fffcdb.png"
   },
   "entrypoints": [
+    "static/js/runtime-main.ee0f9944.js",
+    "static/css/2.f4c56af9.chunk.css",
+    "static/js/2.27fc6e3c.chunk.js",
+    "static/css/main.322f9359.chunk.css",
+    "static/js/main.4e02b20c.chunk.js"
+  ]
+}
