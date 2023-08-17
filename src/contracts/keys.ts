@@ -8,6 +8,17 @@ import {
 
 export const getGlobalStateKey = async () => {
   const [globalStateKey] = await asyncGetPda(
+    [Buffer.from(GLOBAL_STATE_SEED)],
+    PROGRAM_ID
+  );
+  return globalStateKey;
+};
+
+export const getVaultKey = async () => {
+  const [vaultKey] = await asyncGetPda(
+    [Buffer.from(VAULT_SEED)],
+    PROGRAM_ID
+  );
   return vaultKey;
 };
 
