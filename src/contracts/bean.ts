@@ -23,32 +23,6 @@ import { showToast } from "./utils";
 import { toast } from 'react-toastify';
 import * as keys from "./keys";
 import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
-
-// const connection = new Connection("https://api.metaplex.solana.com");
-const connection = new Connection(clusterApiUrl("devnet"));
-
-export const getProgram = (wallet: any) => {
-  let provider = new anchor.Provider(
-    connection,
-    wallet,
-    anchor.Provider.defaultOptions()
-  );
-  const program = new anchor.Program(IDL, Constants.PROGRAM_ID, provider);
-  return program;
-};
-export const getGlobalStateData = async (wallet: any) => {
-  const program = getProgram(wallet);
-  const globalStateKey = await keys.getGlobalStateKey();
-  console.log("globalStateKey =", globalStateKey.toString());
-  const stateData = await program.account.globalState.fetchNullable(
-    globalStateKey
-  );
-  if (stateData === null) return null;
-  return stateData;
-};
-
-export const getWalletSolBalance = async (wallet: any): Promise<String> => {
-  if (wallet.publicKey === null || wallet.publicKey === undefined) return "0";
   let x = await connection.getBalance(wallet.publicKey);
   console.log('getWalletSolBalance x=', x);
   return new BigNumber(await connection.getBalance(wallet.publicKey)).div(
