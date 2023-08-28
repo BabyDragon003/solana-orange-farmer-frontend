@@ -1,4 +1,3 @@
-import { PublicKey } from "@solana/web3.js";
 import {
   GLOBAL_STATE_SEED,
   VAULT_SEED,
