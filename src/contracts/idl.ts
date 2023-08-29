@@ -1,13 +1,8 @@
+export type BakedBeans = {
   "version": "0.1.0",
   "name": "baked_beans",
   "instructions": [
     {
-      "name": "initialize",
-      "accounts": [
-        {
-          "name": "authority",
-          "isMut": true,
-          "isSigner": true
         },
         {
           "name": "globalState",
