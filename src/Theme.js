@@ -3,16 +3,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      primary: "#17215E",
+      main: "#17215E",
     },
-  },
-  typography: {
-    fontFamily: "Montserrat",
-    body1: {
-      fontSize: 20,
+    secondary: {
+      main: "#f4b52d",
     },
-    body2: {
-      fontSize: 16,
     },
     allVariants: {
       color: "#17215E",
