@@ -8,16 +8,11 @@ import {
   clusterApiUrl,
   SystemProgram,
   SYSVAR_RENT_PUBKEY,
-import { showToast } from "./utils";
-import { toast } from 'react-toastify';
-import * as keys from "./keys";
-import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
+  TransactionSignature,
+  TransactionInstruction,
+  LAMPORTS_PER_SOL,
+} from "@solana/web3.js";
 
-// const connection = new Connection("https://api.metaplex.solana.com");
-const connection = new Connection(clusterApiUrl("devnet"));
-
-export const getProgram = (wallet: any) => {
-  let provider = new anchor.Provider(
     connection,
     wallet,
     anchor.Provider.defaultOptions()
