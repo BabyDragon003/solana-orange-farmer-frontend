@@ -1,13 +1,8 @@
+import { Button } from '@material-ui/core';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { Keypair, SystemProgram, Transaction } from '@solana/web3.js';
 import React, { useCallback } from 'react';
 import { useNotify } from './notify';
-
-const SendTransaction = () => {
-    const { connection } = useConnection();
-    const { publicKey, sendTransaction } = useWallet();
-    const notify = useNotify();
-
     const onClick = useCallback(async () => {
         if (!publicKey) {
             notify('error', 'Wallet not connected!');
