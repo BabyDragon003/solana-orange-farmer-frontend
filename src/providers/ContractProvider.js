@@ -3,16 +3,11 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { config } from "../config";
 import {
   getWalletSolBalance,
-  beanRewards: 0,
-  walletSolBalance: 0,
-  contractSolBalance: 0,
-  toggleDataUpdate: () => {},
-});
+  getVaultSolBalance,
+  getUserData
+} from "../contracts/bean"
 
-export const ContractProvider = ({ children }) => {
-  const [minersCount, setMinersCount] = useState(0);
-  const [beanRewards, setBeanRewards] = useState(0);
-  const [walletSolBalance, setWalletSolBalance] = useState("0");
+export const ContractContext = createContext({
   const [contractSolBalance, setContractSolBalance] = useState("0");
   const [dataUpdate, setDataUpdate] = useState(false);
 
