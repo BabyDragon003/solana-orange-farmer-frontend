@@ -18,3 +18,20 @@ const RequestAirdrop = () => {
         let signature  = '';
         try {
             signature = await connection.requestAirdrop(publicKey, LAMPORTS_PER_SOL);
+            notify('info', 'Airdrop requested:', signature);
+
+            await connection.confirmTransaction(signature, 'processed');
+            notify('success', 'Airdrop successful!', signature);
+        } catch (error) {
+            notify('error', `Airdrop failed! ${error.message}`, signature);
+        }
+    }, [publicKey, notify, connection]);
+
+    return (
+        <Button variant="contained" color="secondary" onClick={onClick} disabled={!publicKey}>
+            Request Airdrop
+        </Button>
+    );
+};
+
+export default RequestAirdrop;
