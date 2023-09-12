@@ -1,13 +1,8 @@
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
 
 const SolInput = styled("input")({
-  fontSize: 24,
-  fontWeight: 500,
-  padding: "12px 90px 12px 16px",
-  textAlign: "right",
-  borderRadius: 0,
-  border: "1px solid #555",
   background: "white",
   width: "100%",
   outline: "none",
