@@ -3,6 +3,12 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+
+import { styled } from "@mui/system";
+
+const CardWrapper = styled(Card)({
+  background: "rgb(255 252 248)",
+  marginBottom: 24,
   border: "1px solid #555",
 });
 
