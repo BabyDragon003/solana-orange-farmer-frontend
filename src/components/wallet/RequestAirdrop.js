@@ -9,18 +9,12 @@ const RequestAirdrop = () => {
     const { publicKey } = useWallet();
     const notify = useNotify();
 
-            await connection.confirmTransaction(signature, 'processed');
-            notify('success', 'Airdrop successful!', signature);
-        } catch (error) {
-            notify('error', `Airdrop failed! ${error.message}`, signature);
+    const onClick = useCallback(async () => {
+        if (!publicKey) {
+            notify('error', 'Wallet not connected!');
+            return;
         }
-    }, [publicKey, notify, connection]);
 
-    return (
-        <Button variant="contained" color="secondary" onClick={onClick} disabled={!publicKey}>
-            Request Airdrop
-        </Button>
-    );
-};
-
-export default RequestAirdrop;
+        let signature  = '';
+        try {
+            signature = await connection.requestAirdrop(publicKey, LAMPORTS_PER_SOL);

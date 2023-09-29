@@ -8,6 +8,17 @@ const theme = createTheme({
     secondary: {
       main: "#f4b52d",
     },
+    text: {
+      primary: "#17215E",
+    },
+  },
+  typography: {
+    fontFamily: "Montserrat",
+    body1: {
+      fontSize: 20,
+    },
+    body2: {
+      fontSize: 16,
     },
     allVariants: {
       color: "#17215E",
