@@ -8,17 +8,6 @@ const Wrapper = styled("div")(({ theme }) => ({
   paddingBottom: 24,
   [theme.breakpoints.down("md")]: {
     h5: {
-      fontSize: 20,
-      margin: 0,
-    },
-  },
-}));
-
-export default function Header() {
-  return (
-    <Wrapper>
-      <img src={logo}  className="logo" alt="" style={{ marginTop: "-20px"}}/>
-      <hr />
       <Typography variant="h6" marginTop={1} style={{color: "black"}}>
         <b>Start mining today and reap the benefits of our SOL reward pool. Earn income of up
           to 8% daily and a referral bonus of up to 12%.</b>
