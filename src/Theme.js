@@ -13,6 +13,22 @@ const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: "Montserrat",
+    body1: {
+      fontSize: 20,
+    },
+    body2: {
+      fontSize: 16,
+    },
+    allVariants: {
+      color: "#17215E",
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: 32,
+    },
+    h5: {
+      fontSize: 24,
       fontWeight: 500,
     },
   },
