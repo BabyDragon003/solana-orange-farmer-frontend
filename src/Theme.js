@@ -3,12 +3,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#17215E",
-    },
-    secondary: {
-      main: "#f4b52d",
-    },
-    text: {
       primary: "#17215E",
     },
   },
@@ -22,6 +16,32 @@ const theme = createTheme({
     },
     allVariants: {
       color: "#17215E",
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: 32,
+    },
+    h5: {
+      fontSize: 24,
+      fontWeight: 500,
+    },
+  },
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          // boxShadow: "6px 6px 20px 6px #00000096",
+          borderRadius: 5,
+
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: "12px 24px",
+        },
+      },
     },
     MuiButton: {
       styleOverrides: {

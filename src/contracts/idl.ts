@@ -3,12 +3,6 @@ export type BakedBeans = {
   "name": "baked_beans",
   "instructions": [
     {
-      "name": "initialize",
-      "accounts": [
-        {
-          "name": "authority",
-          "isMut": true,
-          "isSigner": true
         },
         {
           "name": "globalState",
