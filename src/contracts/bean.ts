@@ -3,16 +3,11 @@ import {BN} from "@project-serum/anchor";
 import {
   PublicKey,
   Keypair,
-  TransactionInstruction,
-  LAMPORTS_PER_SOL,
-} from "@solana/web3.js";
-
-import { BigNumber } from "bignumber.js";
-
-import { WalletContextState } from "@solana/wallet-adapter-react";
-
-import * as Constants from "./constants";
-import { IDL } from "./idl";
+  Connection,
+  Transaction,
+  clusterApiUrl,
+  SystemProgram,
+  SYSVAR_RENT_PUBKEY,
 import { showToast } from "./utils";
 import { toast } from 'react-toastify';
 import * as keys from "./keys";
