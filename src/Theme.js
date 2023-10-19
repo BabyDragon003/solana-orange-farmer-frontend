@@ -8,16 +8,11 @@ const theme = createTheme({
     secondary: {
       main: "#f4b52d",
     },
+    text: {
+      primary: "#17215E",
     },
-    allVariants: {
-      color: "#17215E",
-    },
-    h4: {
-      fontWeight: 600,
-      fontSize: 32,
-    },
-    h5: {
-      fontSize: 24,
+  },
+  typography: {
       fontWeight: 500,
     },
   },
