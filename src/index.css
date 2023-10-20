@@ -15,6 +15,22 @@ code {
     monospace;
 }
 
+.MuiList-root {
+  
+  background-color: #fcedbf !important;
+}
+.MuiDialogTitle-root {
+  background-color: #cabd97 !important;
+  color: 'white' !important;
+}
+.MuiButton-containedPrimary {
+  background-color: #cabd97 !important;
+}
+
+.MuiPaper-root {
+  background-color: transparent !important;
+}
+
 .MuiBox-root {
   overflow: hidden !important;
 }

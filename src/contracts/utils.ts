@@ -13,3 +13,15 @@ export const showToast = (
   if (duration < 0) {
     autoClose = false;
   }
+  return toast.error(txt, {
+    position: "bottom-left",
+    autoClose,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+    type,
+    theme: "colored",
+  });
+};
