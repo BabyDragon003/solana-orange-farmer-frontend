@@ -1,4 +1,3 @@
-import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 
@@ -18,6 +17,27 @@ const Input = styled("input")(({ theme }) => ({
   borderRadius: 0,
   border: "1px solid #555",
   background: "white",
+  width: "100%",
+  outline: "none",
+  color: theme.palette.primary.main,
+}));
+
+export default function ReferralLink({ address }) {
+  const link = `${window.origin}?ref=${address}`;
+  const copyToClipBoard = () => {
+    if (!address) return;
+    navigator.clipboard.writeText(link)
+    showToast("Referral Link copied to Clipboard", 2000);
+    console.log("copied");
+  }
+  return (
+    <CardWrapper>
+
+      <CardContent className="fact">
+        <Typography gutterBottom sx={{ color: "black" }} variant="h5" textAlign="center">
+          Referral Link
+        </Typography>
+        <Input value={address ? link : ""} readOnly/>
         <Button
           variant="contained"
           color="secondary"

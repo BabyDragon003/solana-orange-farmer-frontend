@@ -1,4 +1,3 @@
-import * as anchor from "@project-serum/anchor";
 import {BN} from "@project-serum/anchor";
 import {
   PublicKey,
