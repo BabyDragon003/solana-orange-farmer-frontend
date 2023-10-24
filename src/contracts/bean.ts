@@ -1,13 +1,8 @@
+import * as anchor from "@project-serum/anchor";
 import {BN} from "@project-serum/anchor";
 import {
   PublicKey,
   Keypair,
-  Connection,
-  Transaction,
-  clusterApiUrl,
-  SystemProgram,
-  SYSVAR_RENT_PUBKEY,
-  TransactionSignature,
   TransactionInstruction,
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
