@@ -3,6 +3,12 @@
   "name": "BUSDLAND",
   "icons": [
     {
+      "src": "favicon.png",
+      "sizes": "365x419",
+      "type": "image/png"
+    },
+    {
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
